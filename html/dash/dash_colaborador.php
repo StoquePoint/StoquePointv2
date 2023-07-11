@@ -8,31 +8,45 @@ include('../menu.html');
                         <tr>
                             <th>Nº</th>
                             <th>Nome</th>
-                            <th>contato</th>
-                            <th>usuario</th>
-                            <th>Ações</th>
+                            <th>Descrição</th>
+                            <th>Categoria</th>
+                            <th>Apresentação</th>
+                            <th>Quantidade</th>
+                            <th>Preço</th>
+                            <th>Fornecedor</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <?php
-                        include_once('../../php/credenciais.php');
-                        $sql    =   "SELECT * FROM colaborador";
-                        $query  =   mysqli_query($conexao,$sql);
-                        while ($colaborador = mysqli_fetch_array($query)) {
-                        ?>
                         <tr>
-                            <td><?php echo $colaborador["id_colaborador"] ?></td>
-                            <td><?php echo $colaborador["nome"] ?></td>
-                            <td><?php echo $colaborador["contato"] ?></td>
-                            <td><?php echo $colaborador["usuario"] ?></td> 
-                            <td>
-                                <a href="#" class="btn-editar"><i class="fa-solid fa-file-pen"></i></a>
-                                <a href="#" class="btn-delete"><i class="fa-solid fa-trash-can"></i></a>
-                            </td>                           
+                            <td>1</td>
+                            <td>Computador Desktop</td>
+                            <td>Processador i5, 16gb de memoria RAM</td>
+                            <td>Informática</td>
+                            <td>Unidade</td>
+                            <td>20</td>
+                            <td>R$ 3.000,00</td>
+                            <td>Neto Tecnologia</td>
                         </tr>
-                        <?php    
-                        }
-                        ?> 
+                        <tr>
+                            <td>2</td>
+                            <td>Notebook Positivo</td>
+                            <td>celeron, 4gb de memoria RAM, 80gb HD</td>
+                            <td>Informática</td>
+                            <td>Unidade</td>
+                            <td>3</td>
+                            <td>R$ 1.300,00</td>
+                            <td>Starbyte</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Mouse Gamer Logitech</td>
+                            <td>Mouse ergonomico, optico, dpi 3000, bluetooth</td>
+                            <td>Informática</td>
+                            <td>Unidade</td>
+                            <td>5</td>
+                            <td>R$ 130,00</td>
+                            <td>System Informática</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
