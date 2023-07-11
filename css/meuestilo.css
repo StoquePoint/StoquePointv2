@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+
+header {
+    background-color: #2D4A53;
+    padding: 15px 2%;
+    display: flex;
+    height: 10vh;
+    justify-content: space-between;
+}
+
+
+.info-header {
+    color: white;
+    display: flex;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.6em;
+}
+
+.logo h3 {
+    cursor: pointer;
+}
+
+.logo h3:hover {
+    opacity: 0.7;
+}
+
+.icons-header {
+    margin-top: 8px;
+}
+
+.icons-header svg {
+    cursor: pointer;
+}
+
+.icons-header svg:hover {
+    opacity: 0.7;
+}
+
+.info-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin: 0 8px;
+
+}
+
+.icons-header {
+    margin-left: 10px;
+}
+
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #2D4A53;
+    height: 90vh;
+    color: white;
+}
+
+.sidebar a.sidebar-active>svg {
+    color: #777;
+}
+
+.sidebar h3 {
+    color: #333;
+    font-size: 20px;
+    margin: 10px;
+}
+
+.sidebar a {
+    display: block;
+    text-decoration: none;
+    padding: 10px 15px;
+    color: white;
+}
+
+.sidebar a:hover {
+    border-left: 2px solid #2D4A53;
+    background-color: rgb(245, 245, 245);
+    color: #777;
+    font-weight: bold;
+}
+
+.sidebar a:hover .sidebar a>svg {
+    color: #2D4A53;
+}
+
+.sidebar a>svg {
+    color: white;
+
+}
+
+.sidebar a,
+i {
+    margin-right: 10px;
+}
+
+.content {
+    width: 80%;
+    background-color: rgb(245, 245, 245);
+}
+
+#content2 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    overflow-x: auto
+}
+
+#title_cad {
+    color: #2D4A53;
+    margin: 20px;
+}
+
+#form_cad {
+    margin: 10px;
+}
+
+#form_cad form {
+    display: -ms-flexbox;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#form_cad input {
+    width: 300px;
+    height: 50px;
+    border: 1px solid rgb(54, 54, 54);
+    margin-top: 2px;
+    border-radius: 10px;
+}
+
+#form_cad input:hover {
+    text-align: center;
+}
+
+#form_cad input::placeholder {
+    color: black;
+    padding-left: 10px;
+}
+
+#form_cad input[type='submit'] {
+    background-color: #2d4a53;
+    color: beige;
+    width: 300px;
+    height: 50px;
+    border: 1px solid rgb(54, 54, 54);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#form_cad input[type='submit'] {
+    color: beige;
+}
+
+.sidebar h3 {
+    color: #000000;
+}
+
+.box-info {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.info-text {
+    height: 133px;
+    background-color: #2D4A53;
+    width: 30%;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2em;
+    color: #ffffff;
+}
+
+.info-text span {
+    border-radius: 10px;
+    height: 80px;
+    min-width: 80px;
+    background-color: #565F66;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    color: #ffffff;
+}
+
+.img-logo {
+    text-align: center;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-logo img {
+    width: 200px;
+}
+
+#produtos {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 96%;
+    margin-top: 20px;
+
+}
+
+#produtos td,
+#produtos th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#produtos tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#produtos tr:hover {
+    background-color: #ddd;
+}
+
+#produtos th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #2D4A53;
+    color: white;
+}
+
+#produtos td,
+#produtos th {
+    text-align: center;
+}
+.btn-editar, .btn-delete{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 30px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    margin: 2px auto;
+}
+.btn-editar{
+    background-color: #eeb600;
+    align-items: center;
+}
+.btn-delete{
+    background-color: #c42e00;
+    align-items: center;
+}
+
+i {
+    margin-left: auto;
+    margin-right: auto; 
+}
