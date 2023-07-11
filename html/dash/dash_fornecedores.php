@@ -8,33 +8,58 @@ include('../menu.html');
                         <tr>
                             <th>Nº</th>
                             <th>Nome</th>
-                            <th>Endereço</th>
-                            <th>CNPJ</th>
-                            <th>Contato</th>
+                            <th>Descrição</th>
+                            <th>Categoria</th>
+                            <th>Apresentação</th>
+                            <th>Quantidade</th>
+                            <th>Preço</th>
+                            <th>Fornecedor</th>
                             <th>Ações</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <?php
-                        include_once('../../php/credenciais.php');
-                        $sql    =   "SELECT * FROM fornecedor";
-                        $query  =   mysqli_query($conexao,$sql);
-                        while ($fornecedor = mysqli_fetch_array($query)) {
-                        ?>
                         <tr>
-                            <td><?php echo $fornecedor["id_fornecedor"] ?></td>
-                            <td><?php echo $fornecedor["nome"] ?></td>
-                            <td><?php echo $fornecedor["endereco"] ?></td>
-                            <td><?php echo $fornecedor["cnpj"] ?></td>
-                            <td><?php echo $fornecedor["contato"] ?></td>  
-                            <td>
-                                <a href="#" class="btn-editar"><i class="fa-solid fa-file-pen"></i></a>
-                                <a href="#" class="btn-delete"><i class="fa-solid fa-trash-can"></i></a>
-                            </td>                      
+                            <td>1</td>
+                            <td>Computador Desktop</td>
+                            <td>Processador i5, 16gb de memoria RAM</td>
+                            <td>Informática</td>
+                            <td>Unidade</td>
+                            <td>20</td>
+                            <td>R$ 3.000,00</td>
+                            <td>Neto Tecnologia</td>
+                            <td class="btn-acao">
+                                <a href="#" class="btn-editar">Editar</a>
+                                <a href="#" class="btn-delete">Excluir</a>
+                            </td>
                         </tr>
-                        <?php    
-                        }
-                        ?> 
+                        <tr>
+                            <td>2</td>
+                            <td>Notebook Positivo</td>
+                            <td>celeron, 4gb de memoria RAM, 80gb HD</td>
+                            <td>Informática</td>
+                            <td>Unidade</td>
+                            <td>3</td>
+                            <td>R$ 1.300,00</td>
+                            <td>Starbyte</td>
+                            <td class="btn-acao">
+                                <a href="#" class="btn-editar">Editar</a>
+                                <a href="#" class="btn-delete">Excluir</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Mouse Gamer Logitech</td>
+                            <td>Mouse ergonomico, optico, dpi 3000, bluetooth</td>
+                            <td>Informática</td>
+                            <td>Unidade</td>
+                            <td>5</td>
+                            <td>R$ 130,00</td>
+                            <td>System Informática</td>
+                            <td>
+                                <a href="#" class="btn-editar">Editar</a>
+                                <a href="#" class="btn-delete">Excluir</a>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
