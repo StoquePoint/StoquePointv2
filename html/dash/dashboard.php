@@ -29,7 +29,6 @@ include('../menu.html');
                         <th>Quantidade</th>
                         <th>Preço</th>
                         <th>Fornecedor</th>
-                        <th>Ações</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -42,10 +41,6 @@ include('../menu.html');
                         <td>20</td>
                         <td>R$ 3.000,00</td>
                         <td>Neto Tecnologia</td>
-                        <td>
-                                <a href="#" class="btn-editar"><i class="fa-solid fa-file-pen"></i></a>
-                                <a href="#" class="btn-delete"><i class="fa-solid fa-trash-can"></i></a>
-                            </td>
                     </tr>
                     <tr>
                         <td>2</td>
@@ -56,10 +51,6 @@ include('../menu.html');
                         <td>3</td>
                         <td>R$ 1.300,00</td>
                         <td>Starbyte</td>
-                        <td>
-                                <a href="#" class="btn-editar"><i class="fa-solid fa-file-pen"></i></a>
-                                <a href="#" class="btn-delete"><i class="fa-solid fa-trash-can"></i></a>
-                            </td>
                     </tr>
                     <tr>
                         <td>3</td>
@@ -70,10 +61,6 @@ include('../menu.html');
                         <td>5</td>
                         <td>R$ 130,00</td>
                         <td>System Informática</td>
-                        <td>
-                                <a href="#" class="btn-editar"><i class="fa-solid fa-file-pen"></i></a>
-                                <a href="#" class="btn-delete"><i class="fa-solid fa-trash-can"></i></a>
-                            </td>
                     </tr>
                 </tbody>
                 <tfoot>
