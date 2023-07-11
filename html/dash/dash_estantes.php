@@ -7,67 +7,32 @@ include('../menu.html');
                     <thead>
                         <tr>
                             <th>Nº</th>
-                            <th>Nome</th>
-                            <th>Descrição</th>
-                            <th>Categoria</th>
-                            <th>Apresentação</th>
-                            <th>Quantidade</th>
-                            <th>Preço</th>
-                            <th>Fornecedor</th>
+                            <th>estante</th>
+                            <th>prateleira</th>
                             <th>Ações</th>
                         </tr>
                     </thead>
                     <tbody>
+                        <?php
+                        include_once('../../php/credenciais.php');
+                        $sql    =   "SELECT * FROM estantes";
+                        $query  =   mysqli_query($conexao,$sql);
+                        while ($estantes = mysqli_fetch_array($query)) {
+                        ?>
                         <tr>
-                            <td>1</td>
-                            <td>Computador Desktop</td>
-                            <td>Processador i5, 16gb de memoria RAM</td>
-                            <td>Informática</td>
-                            <td>Unidade</td>
-                            <td>20</td>
-                            <td>R$ 3.000,00</td>
-                            <td>Neto Tecnologia</td>
+                            <td><?php echo $estantes["id_estante"] ?></td>
+                            <td><?php echo $estantes["estante"] ?></td>
+                            <td><?php echo $estantes["prateleira"] ?></td>
                             <td>
                                 <a href="#" class="btn-editar"><i class="fa-solid fa-file-pen"></i></a>
                                 <a href="#" class="btn-delete"><i class="fa-solid fa-trash-can"></i></a>
-                            </td>
+                            </td>                
                         </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Notebook Positivo</td>
-                            <td>celeron, 4gb de memoria RAM, 80gb HD</td>
-                            <td>Informática</td>
-                            <td>Unidade</td>
-                            <td>3</td>
-                            <td>R$ 1.300,00</td>
-                            <td>Starbyte</td>
-                            <td>
-                                <a href="#" class="btn-editar"><i class="fa-solid fa-file-pen"></i></a>
-                                <a href="#" class="btn-delete"><i class="fa-solid fa-trash-can"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Mouse Gamer Logitech</td>
-                            <td>Mouse ergonomico, optico, dpi 3000, bluetooth</td>
-                            <td>Informática</td>
-                            <td>Unidade</td>
-                            <td>5</td>
-                            <td>R$ 130,00</td>
-                            <td>System Informática</td>
-                            <td>
-                                <a href="#" class="btn-editar"><i class="fa-solid fa-file-pen"></i></a>
-                                <a href="#" class="btn-delete"><i class="fa-solid fa-trash-can"></i></a>
-                            </td>
-                        </tr>
+                        <?php    
+                        }
+                        ?> 
                     </tbody>
                 </table>
-            
-            </div>
-            <div id="content3">
-                <?php 
-                include('../cad/cad_estantes.html'); 
-                ?>
             </div>
         </div>
     </section>

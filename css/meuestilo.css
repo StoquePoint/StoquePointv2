@@ -267,14 +267,7 @@ i {
 }
 .btn-editar{
     background-color: #eeb600;
-    align-items: center;
 }
 .btn-delete{
     background-color: #c42e00;
-    align-items: center;
-}
-
-i {
-    margin-left: auto;
-    margin-right: auto; 
 }
