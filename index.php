@@ -1,5 +1,5 @@
 <?php
-include('./php/conexao.php');
+    include('php/conexao.php');
 ?>
 
 <!DOCTYPE html>
@@ -7,12 +7,16 @@ include('./php/conexao.php');
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../StoquePoint/css/meuestilo.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
     <title>Document</title>
 </head>
 
-<body>
+<body class = "body-login">
+
+    <main>
 
     <nav id="vertical">
         <div class="slogan">
@@ -32,7 +36,7 @@ include('./php/conexao.php');
 
         <div class="input">
             <form action="php/login.php" class="inputs" method="POST">
-                <input class="usuario" type="text" name="usuario" placeholder="Informe seu usuario" />
+                <input class="usuario" type="text" name="usuario" placeholder="Informe seu usuário" />
                 
                 <br />
 
@@ -47,6 +51,8 @@ include('./php/conexao.php');
         </div>
 
     </div>
+
+    </main>
 
 </body>
 

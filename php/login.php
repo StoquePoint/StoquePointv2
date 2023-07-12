@@ -1,33 +1,47 @@
 <?php
-session_start();
-include_once('conexao.php');
+    //INICIA A SESSÃO
+    session_start();
 
-if(empty($_POST['usuario']) || empty($_POST['senha'])) {
-    header ('Location: Location: ../index.php');
-    exit();
-}
+    //VALIDA AS ENTRADAS NO CÓDIGO, POR SEGURANÇA
+    if (empty($_POST) or (empty($_POST["usuario"]) or (empty($_POST["senha"] ) ) ) ) {
+       
+        print "<script>location.href='../index.php';</script>";
+    }
 
+    // ARQUIVO PARA PEGAR A CONEXÃO
+    include("conexao.php");
 
-$usuario = mysqli_real_escape_string($conexao, $_POST['usuario']);
-$senha = mysqli_real_escape_string($conexao, $_POST['senha']);
+//  ##COMPARAÇÃO DE USUÁRIOS COM O BD PARA LOGAR NO SISTEMA
+    //VARIÁVEIS PARA COMPARAR
+    $usuario = $_POST["usuario"];
+    $senha = $_POST["senha"];
 
+//  #CONSULTA E COMPARAÇÃO NO BD
+    $sql = "SELECT * FROM colaborador 
+            WHERE usuario = '{$usuario}' 
+            AND senha = '{$senha}'
+            " ;
+// ESSA VARIÁVEL EXECUTA A CONEXÃO QUE VAMOS CRIAR AINDA
+// JUNTAMENTE COM A QUERY(código de consulta no BD) QUE VAMOS EXECUTAR
+// FOI COLOCADO A MENSAGEM DE ERRO TAMBÉM, CASO DÊ ALGUM PROBLEMA NO LOGIN [die]
+    $result = $conexao -> query($sql) or die($conexao->error);
 
-$query = "select * from colaborador where colaborador.usuario = '{$usuario}' and colaborador.senha ='{$senha}'";
+    //ELE TRANSFORMA A REDE EM OBJETOS PARA CHAMAR INDIVIDUALMENTE CASO PRECISE CHAMAR INDIVIDUALMENTE
+    $row = $result->fetch_object();
 
-$result = mysqli_query($conexao, $query);
+    //MOSTRA A QUANTIDADE DE RESULTADOS QUE FORAM ENCONTRADOS
+    $qtd = $result->num_rows;
 
-
-$row = mysqli_fetch_assoc($result);
-
-if ($row != null) {
-    $_SESSION['usuario'] = $usuario;
-    header('Location: ../html/menu.html');
-    exit();
-    
-}else {
-    $_SESSION['nao_autenticado'] = true;
-    header('Location: ../index.php');
-    exit();
-}
+    // VALIDA O LOGIN NO SISTEMA
+    if ($qtd > 0) { //CASO O LOGIN PASSE: ####
+        
+        $_SESSION["usuario"] = $usuario;
+        $_SESSION["nome"] = $row->nome; //pega o nome do usuário que vem do bd
+        print "<script>location.href='../html/menu.html'</script>"; //arquivo de recepção com o usuário logado
+    }else{
+        //CASO O LOGIN NÃO PASSE: ####
+        print "<script>alert('Usuário ou senha Incorretos')</script>";
+        print "<script>location.href='../index.php'</script>";
+    }
 
 ?>
