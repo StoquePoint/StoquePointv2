@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styler1.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <title>Stoque Point</title>
 </head>
 
-<body>
+<body class = "body-login">
+
+    <main>
 
     <nav id="vertical">
         <div class="slogan">
@@ -27,17 +30,24 @@
         </div>
 
         <div class="input">
-            <div class="inputs">
-                <input type="text" name="Informe seu e-mail" placeholder="Informe seu e-mail" /><br />
+            <form action="php/login.php" class="inputs" method="POST">
+                <input class="usuario" type="text" name="usuario" placeholder="Informe seu usuario" />
+                
+                <br />
 
-                <input type="text" name="Informe sua senha" placeholder="Informe sua senha" /><br />
+                <input class="senha" type="password" name="senha" placeholder="Informe sua senha" />
+                
+                <br />
+
                 <div class="buttonT">
-                    <button>Entrar</button>
+                    <button type="submit">Entrar</button>
                 </div>
-            </div>
+            </form>
         </div>
 
     </div>
+
+    </main>
 
 </body>
 
