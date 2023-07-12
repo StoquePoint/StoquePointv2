@@ -36,11 +36,11 @@
 
         <div class="input">
             <form action="php/login.php" class="inputs" method="POST">
-                <input class="usuario" type="text" name="usuario" placeholder="Informe seu usuário" />
+                <input class="usuario" type="text" name="usuario" placeholder="Informe seu usuário" required/>
                 
                 <br />
 
-                <input class="senha" type="password" name="senha" placeholder="Informe sua senha" />
+                <input class="senha" type="password" name="senha" placeholder="Informe sua senha" required/>
                 
                 <br />
 
