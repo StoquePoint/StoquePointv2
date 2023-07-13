@@ -5,8 +5,6 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* Definições padrões de estilo */
-
 html,
 body {
     height: 100%;
@@ -273,6 +271,7 @@ i {
 .btn-delete{
     background-color: #c42e00;
 }
+
 
 /* Definições de estilo para a TELA DE LOGIN */
 
